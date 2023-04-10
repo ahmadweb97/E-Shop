@@ -138,7 +138,7 @@
                 </div>
                 <div class="mt-2">
                 @if (Route::has('password.request'))
-                <a class="btn btn-link text-warning" href="{{ route('password.request') }}">
+                <a class="btn btn-link text-primary" href="{{ route('password.request') }}">
                     {{ __('Forgot Your Password?') }}
                 </a>
             @endif

@@ -29,7 +29,7 @@
 </div> --}}
 
 <style>
-   
+
 
 </style>
 
@@ -38,7 +38,7 @@
       <div class="col-12 col-md-8 mx-auto ">
         <div class="card">
           <div class="card-header">
-            <h1>Dashboard</h1>
+            <h1>Welcome  {{ Auth::user()->name }}!</h1>
           </div>
           <div class="card-body">
             @if (session('status'))
@@ -51,7 +51,11 @@
               {{ session('status2') }}
             </div>
             @endif
-            <p>You are logged in!</p>
+            <p>You are logged in!
+            </p>
+            <div>
+                <a href="{{ url('collections') }}" class="btn btn-success" title="Continue Shopping">Shop</a>
+            </div>
           </div>
         </div>
       </div>

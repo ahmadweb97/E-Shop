@@ -13,65 +13,33 @@ class CartShow extends Component
 
     public function decQty(int $cartId)
     {
-        $cartData = Cart::where('id',  $cartId)->where('user_id', auth()->user()->id)->first();
+        $cartData = Cart::where('id', $cartId)->where('user_id', auth()->user()->id)->first();
 
+        if ($cartData) {
+            if ($cartData->quantity > 1) { // Check if quantity is greater than 1
+                $cartData->decrement('quantity');
 
-            if ($cartData) {
-
-                if ($cartData->productColor()->where('id', $cartData->product_color_id)->exists()) {
-
-                    $productColor = $cartData->productColor()->where('id', $cartData->product_color_id)->first();
-
-                    if ($productColor->quantity > $cartData->quantity) {
-
-                        $cartData->decrement('quantity');
-
-                        $this->dispatchBrowserEvent('message', [
-                            'text' => 'Quantity updated decreased!',
-                            'type' => 'success',
-                            'status' => 200
-                         ]);
-                    }else {
-                        $this->dispatchBrowserEvent('message', [
-                            'text' => 'Only '.$productColor->quantity.' quantity available!',
-                            'type' => 'success',
-                            'status' => 200
-                         ]);
-                    }
-
-                }
-
-                else {
-                    if ($cartData->product->quantity > $cartData->quantity) {
-
-                        $cartData->decrement('quantity');
-
-                        $this->dispatchBrowserEvent('message', [
-                            'text' => 'Quantity updated decreased!',
-                            'type' => 'success',
-                            'status' => 200
-                         ]);
-                        }else {
-                            $this->dispatchBrowserEvent('message', [
-                                'text' => 'Only '.$cartData->product->quantity.' quantity available!',
-                                'type' => 'success',
-                                'status' => 200
-                             ]);
-                        }
-                }
-
-
-
-            }
-            else {
                 $this->dispatchBrowserEvent('message', [
-                    'text' => 'Something went wrong!',
+                    'text' => 'Quantity updated decreased!',
+                    'type' => 'success',
+                    'status' => 200
+                ]);
+            } else {
+                $this->dispatchBrowserEvent('message', [
+                    'text' => 'Minimum quantity is 1!',
                     'type' => 'error',
-                    'status' => 404
-                 ]);
+                    'status' => 400
+                ]);
             }
-
+        } else {
+            $this->dispatchBrowserEvent('message', [
+                'text' => 'Something went wrong!',
+                'type' => 'error',
+                'status' => 404
+            ]);
+        }
     }
+
 
     public function incQty(int $cartId)
     {

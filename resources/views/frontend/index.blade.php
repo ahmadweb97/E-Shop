@@ -54,7 +54,7 @@
             <div class="col-md-8 text-center">
                 <h4>Welcome to E-Shop</h4>
                 <div class="underline mx-auto"></div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, officia. Suscipit ullam a quis laborum nemo inventore minus debitis distinctio!</p>
+                <p>"Welcome to eshop, we provide the best selection of electronics, fashion, home decor, and more! Our products are carefully curated to bring you the latest trends and highest quality items at affordable prices. Browse our collection today and discover the perfect item to fit your lifestyle."</p>
             </div>
         </div>
     </div>

@@ -65,8 +65,8 @@
             <div class="col-md-2 col-7 my-auto">
                 <div class="quantity">
                     <div class="input-group">
-                        <button type="button" wire:loading.attr="disabled" wire:click="decQty({{ $cartItem->id  }})" class="btn btn1"><i class="fa fa-minus"></i></button>
-                        <input type="text" value="{{ $cartItem->quantity }}" class="input-quantity" />
+                        <button type="button"  wire:loading.attr="disabled" wire:click="decQty({{ $cartItem->id  }})" class="btn btn1"><i class="fa fa-minus"></i></button>
+                        <input type="text" " value="{{ $cartItem->quantity }}" class="input-quantity" />
                         <button type="button"  wire:loading.attr="disabled" wire:click="incQty({{ $cartItem->id  }})" class="btn btn1"><i class="fa fa-plus"></i></button>
                     </div>
                 </div>

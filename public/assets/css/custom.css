@@ -38,7 +38,7 @@
     border-bottom: 1px solid #ccc;
 }
 .main-navbar .top-navbar{
-    background-color: coral;
+    background-color: royalblue;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -62,7 +62,7 @@
 .main-navbar .top-navbar .dropdown-menu .dropdown-item i{
     width: 20px;
     text-align: center;
-    color: coral;
+    color: royalblue;
     font-size: 14px;
 }
 .main-navbar .navbar{
@@ -241,7 +241,7 @@
     margin-top: 10px;
 }
 .product-view .btn1:hover{
-    background-color: coral;
+    background-color: royalblue;
     color: #fff;
 }
 .product-view .input-quantity{
@@ -296,7 +296,7 @@
     font-size: 10px;
 }
 .shopping-cart .btn1:hover{
-    background-color: coral;
+    background-color: royalblue;
     color: #fff;
 }
 .shopping-cart .input-quantity{
@@ -317,7 +317,7 @@
 
 }
 .checkout .form-control:focus{
-    border: 1px solid coral !important;
+    border: 1px solid royalblue !important;
     box-shadow: none !important;
 }
 .checkout .nav-link{
@@ -335,7 +335,7 @@
 /*End checkout */
 
 div #bg{
-    background-color: coral;
+    background-color: royalblue;
 
 }
 
@@ -360,14 +360,14 @@ div #image img:hover{
 .underline{
     height: 4px;
     width: 100px;
-    background-color: coral;
+    background-color: royalblue;
     margin: 10px 0;
 }
 
 /* footer */
 .footer-area{
     padding: 40px 0px;
-    background-color: coral;
+    background-color: royalblue;
     color: #fff;
 }
 .footer-area a{

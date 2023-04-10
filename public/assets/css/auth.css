@@ -316,7 +316,7 @@
      width: 300%;
      height: 100%;
      background: #a64bf4;
-     background: -webkit-linear-gradient(right, #21d4fd, #FF9800, #FFC107, #F44336);
+     background: -webkit-linear-gradient(right, #21d4fd, #FFC0CB,#808080, #4169E1);
      background: -o-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
      background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
      background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
@@ -456,7 +456,7 @@
     color: #212529;
   }
 
-  
+
 
   .card-body {
     padding: 20px;
